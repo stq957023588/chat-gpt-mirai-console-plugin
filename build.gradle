@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.0'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.0'
+
+    id 'net.mamoe.mirai-console' version '2.15.0-M1'
+}
+
+group = 'com.fool.mirai.console.plugin'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9.3'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+mirai {
+    jvmTarget = JavaVersion.VERSION_11
+}
+
+

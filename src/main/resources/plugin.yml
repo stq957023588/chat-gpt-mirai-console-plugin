@@ -1,0 +1,8 @@
+id: com.fool.box
+version: 0.0.1
+name: Box
+author: Fool
+dependencies:
+  - "net.mamoe.chat-command?"
+main: com.fool.mirai.console.plugin.BoxPlugin
+info: 允许在聊天环境执行指令。
