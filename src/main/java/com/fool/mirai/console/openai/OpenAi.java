@@ -22,8 +22,6 @@ import org.apache.http.util.EntityUtils;
 
 public class OpenAi {
 
-    private static final String API_URL = "https://api.openai.com/v1/chat/completions";
-
     public static final ObjectMapper OBJECT_MAPPER;
 
     static {
@@ -35,7 +33,7 @@ public class OpenAi {
     }
 
     public static ChatCompletionResponse chatCompletion(ChatCompletionParameters parameters) {
-        HttpPost httpPost = new HttpPost(API_URL);
+        HttpPost httpPost = new HttpPost(Data.INSTANCE.getApi());
         httpPost.addHeader(HttpHeaders.AUTHORIZATION, "Bearer " + Data.INSTANCE.getApiKey());
 
         RequestConfig.Builder builder = RequestConfig

@@ -8,6 +8,8 @@
 ## 使用方法
 请按照mirai中的 [文档](https://docs.mirai.mamoe.net/console/ConfiguringProjects.html) 来确保mirai环境安装完成，然后将release中打包好的插件放入plugins文件夹启动mirai就可以了
 
+添加群权限后，可以在群内`@`机器人即可
+
 ## 指令
 
 | 指令名称         | 用法        | 备注                                             |
@@ -17,6 +19,7 @@
 ## 配置
 
 ```yaml
+api: 'https://api.openai.com/v1/chat/completions'
 # OpenAi的ApiKey
 apiKey: ''
 # 如果需要代理，不需要请忽略

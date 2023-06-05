@@ -45,7 +45,7 @@ public class ChatGPTAddCommand extends JRawCommand {
         }
 
         if (Optional.ofNullable(sender.getBot()).map(e -> e.getFriend(qq)).isPresent()) {
-            Config.INSTANCE.getEnabledGroups().add(qq);
+            Config.INSTANCE.getEnableFriends().add(qq);
             sender.sendMessage(new PlainText(String.format("好友：%s已开启ChatGPT", qq)));
         }
     }

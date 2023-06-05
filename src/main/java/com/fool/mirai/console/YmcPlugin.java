@@ -75,10 +75,12 @@ public class YmcPlugin extends JavaPlugin {
 
     private void registerCommand() {
         CommandManager.INSTANCE.registerCommand(ChatGPTAddCommand.INSTANCE, true);
+        CommandManager.INSTANCE.registerCommand(ChatGPTRemoveCommand.INSTANCE, true);
     }
 
     private void unregisterCommand() {
         CommandManager.INSTANCE.unregisterCommand(ChatGPTAddCommand.INSTANCE);
+        CommandManager.INSTANCE.unregisterCommand(ChatGPTRemoveCommand.INSTANCE);
     }
 
 }
